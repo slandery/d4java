@@ -1,5 +1,6 @@
 package com.tts;
 
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.lang.Math;
@@ -42,31 +43,41 @@ public class Main {
         System.out.printf("Your sum is %s", sum);
 
 
-        //int[] math = toPower(2, 2);
-
+        String mathA = Arrays.toString(toPower(4,2));
+        System.out.println("  This is topower request of 4**2"+ mathA);
     }
 
-}
 
- /*   //make toPower with two int as size, power
-    public static int toPower(int[] size, int power) {
+
+    //make toPower with two int as size, power
+    public static int[] toPower(int size, int power) {
         //below not working..but should be something like this
-        Scanner scanner = new Scanner(System.in);
-        ArrayList<Integer> math = new ArrayList<Integer>();
-        for (int i = 1; i <= 5; i++) {
-            int newArr = scanner.nextInt();
+        //int[] newArr = new int[size];
+
+        //Scanner scanner = new Scanner(System.in);
+        //ArrayList<Integer> math = new ArrayList<Integer>();
+        int[] mathArr = new int[size];
+        for (int i = 0; i < size; i++) {
+            int math = (int)Math.pow( i, power);
+            mathArr[i] = math;
+
+            /*int math = scanner.nextInt();
+
             math.add(newArr);
-            return power >= size.length ? -1 : (int) Math.pow(size[power], power);
+            //return power >= size.length ? -1 : (int) Math.pow(size[power], power);
             int 1 = scanner.nextInt();
             int 2 = scanner.nextInt();
             int 3 = scanner.nextInt();
             math.add(1);
             math.add(2);
-            math.add(3);
+            math.add(3);*/
 
         }
-        return power;
+        return mathArr;
     }
+
+    double[ ] exampleArray = {1,5,6,5,4,1};
+
 
 }
 
@@ -75,7 +86,7 @@ public class Main {
 
 
 //
-*/
+
 
 
 
